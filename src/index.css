@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+TC:wght@200;300;400;500;600&family=Inter:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Noto Serif TC", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-zen-bg: #f9f8f4;
+  --color-zen-ink: #2c2b29;
+  --color-zen-olive: #5e6052;
+  --color-zen-sand: #e6e2d6;
+  --color-zen-gold: #bca071;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--color-zen-bg);
+  color: var(--color-zen-ink);
+  overflow-x: hidden;
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  color: #4a4a4a;
+}
+
+.title-text {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+}
+
+.zen-input {
+  @apply w-full border-b border-zen-sand bg-transparent py-3 px-1 text-zen-ink font-sans outline-none focus:border-zen-olive transition-colors;
+}
+
+.zen-label {
+  @apply block text-sm font-sans tracking-widest uppercase text-zen-olive mb-1;
+}
+
+.zen-button {
+  @apply inline-flex items-center justify-center px-8 py-4 bg-zen-ink text-zen-bg font-sans tracking-[0.2em] uppercase text-sm hover:bg-zen-olive transition-all duration-300;
+}
